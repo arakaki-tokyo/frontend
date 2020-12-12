@@ -1,0 +1,56 @@
+@keyframes turnAround {
+    0%{
+      transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100%{
+      transform:rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+    }
+  }
+  :root {
+    --edge-length: 400;
+    --edge-length-px: calc(var(--edge-length) * 1px);
+    --half-edge-length-px: calc(var(--edge-length) / 2 * 1px);
+  }
+
+#scene{
+    perspective: 500px;
+    width: var(--edge-length-px);
+    margin: 150px auto;
+}
+
+#three{
+   transform-style:preserve-3d;
+    position: relative;
+    width: var(--edge-length-px);
+    height: var(--edge-length-px);
+    /* animation: turnAround 30s linear 0s infinite normal none running; */
+}
+
+.axis{
+    border: solid 1px;
+    width : var(--edge-length-px);
+    height : 1px;
+    position: absolute;
+    top: var(--half-edge-length-px);
+    box-sizing: border-box;
+}
+.plane{
+    position: absolute;
+    width: var(--edge-length-px);
+    height: var(--edge-length-px);
+}
+#x, #zx{
+    transform: rotateX( -90deg);
+    background-color: hsla(0, 100%, 50%, .3);
+}
+#y, #xy{
+    transform: rotateZ( 90deg);
+    background-color: hsla(120, 100%, 50%, .3);
+}
+
+#z, #yz{
+    transform: rotateY( 90deg);
+    background-color: hsla(240, 100%, 50%, .3);
+}
+
+
