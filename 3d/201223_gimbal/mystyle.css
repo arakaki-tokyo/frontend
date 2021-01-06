@@ -1,0 +1,82 @@
+:root {
+  --edge-length: 400px;
+  --half-edge-length: calc(var(--edge-length) / 2);
+  --gap: 20px;
+  --half-gap: calc(var(--gap) / 2);
+}
+.axis{
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border:solid 5px;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.axis::after, .axis::before{
+  --local-edge: var(--half-gap);
+  content: "";
+  background: hsla(0, 0%, 50%, .5);
+  border: solid 1px;
+  width: var(--local-edge);
+  height: var(--local-edge);
+  position: absolute;
+  top: calc(50% - var(--local-edge) / 2);
+  left: calc(var(--local-edge) * -1);
+  box-sizing: border-box;
+  
+}
+.axis::before{
+  left: 100%;
+}
+#scene{
+  transform-style: preserve-3d;
+  perspective: 800px;
+  position: relative;
+  width: var(--edge-length);
+  height: var(--edge-length);
+  margin:10px auto;
+
+}
+#outer{
+  width: var(--edge-length);
+  height: var(--edge-length);
+}
+#middle{
+  width: calc(var(--edge-length) - var(--gap));
+  height: calc(var(--edge-length) - var(--gap));
+  transform: rotateZ(90deg);
+}
+#inner{
+  width: calc(var(--edge-length) - var(--gap) * 2);
+  height: calc(var(--edge-length) - var(--gap) * 2);
+  transform: rotateZ(-90deg);
+}
+
+#content{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+#content > *{
+  line-height: 100px;
+  font-size: 91px;
+}
+#content > * > *{
+  position: absolute;
+  left: -7px;
+}
+#controller{
+  position: fixed;
+  top: 0;
+
+}

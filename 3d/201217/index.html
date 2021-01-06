@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script defer src="myscript.js"></script>
+</head>
+
+<body>
+    <div id="perspective">
+    <div id="scene">
+        <div id="container">
+        </div>
+    </div>
+    </div>
+    <div id="controller">
+        <div>
+            <p>perspecitve moving</p>
+            <p><input id="sRotateY" type="range" step="1" min="0" max="360" value="0"></p>
+        </div>
+        <p><input id="xs" type="range" step="1" min="-180" max="180" value="0"></p>
+        <p><input id="ys" type="range" step="1" min="-180" max="180" value="0"></p>
+        <p><input id="zs" type="range" step="1" min="-180" max="180" value="0"></p>
+        <div><input id="sw" type="checkbox"><label for="sw" id="toggle"></label></div>
+        <div id="debug"></div>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</body>
+
+</html>

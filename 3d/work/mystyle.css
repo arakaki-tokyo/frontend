@@ -1,0 +1,61 @@
+#scene{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    position: absolute;
+    left: 0; right: 0;
+}
+#three{
+    transform-style: preserve-3d;
+}
+
+#x{
+    border-color: red;
+    color: red;
+}
+#y{
+    transform: rotateZ(90deg);
+    transform-origin: 0 0 0;
+    border-color: green;
+    color: green;
+}
+#z{
+    transform: rotateY(-90deg);
+    transform-origin: 0 0 0;
+    border-color: blue;
+    color: blue;
+}
+#pers_x{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+}
+#pers_y{
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: rotateZ(-90deg);
+}
+.axis{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:350px;
+    height: 2px;
+    border: solid 1px;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 0px;
+}
+.point{
+    position: absolute;
+
+}
+.point::after{
+    content: "・";
+    position: absolute;
+    top: -.75rem;
+    left: -.5rem;
+}

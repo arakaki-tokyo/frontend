@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <script defer src="myscript.js"></script>
+    <script src="cube.js"></script>
+</head>
+
+<body>
+    <div id="perspective">
+        <div id="scene">
+            <div id="outer" class="axis">
+                <div id="middle" class="axis">
+                    <div id="inner" class="axis">
+                        <div id="content" class="cube"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controller">
+            <div>
+                <select>
+                    <option value="xyz">xyz</option>
+                    <option value="yzx">yzx</option>
+                    <option value="zxy">zxy</option>
+                    <option value="xzy">xzy</option>
+                    <option value="yxz">yxz</option>
+                    <option value="zyx">zyx</option>
+                </select>
+            </div>
+            <div>
+                <p>x:<input id="xs" class="slider" type="range" step="1" min="-180" max="180" value="0"></p>
+                <p>y:<input id="ys" class="slider" type="range" step="1" min="-180" max="180" value="0"></p>
+                <p>z:<input id="zs" class="slider" type="range" step="1" min="-180" max="180" value="0"></p>
+                <!-- <div><input id="sw" type="checkbox"><label for="sw" id="toggle"></label></div> -->
+            </div>
+        </div>
+</body>
+
+</html>

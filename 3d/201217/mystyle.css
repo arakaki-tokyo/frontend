@@ -1,0 +1,49 @@
+  :root {
+    --edge-length: 800;
+    --edge-length-px: calc(var(--edge-length) * 1px);
+    --m-edge-length-px: calc(var(--edge-length) * -1 * 1px);
+    --half-edge-length-px: calc(var(--edge-length) / 2 * 1px);
+    --m-half-edge-length-px: calc(var(--edge-length) * -1 / 2 * 1px);
+  }
+#perspective{
+  perspective: 700px;
+  perspective-origin: 50% 50%;
+}
+#scene{
+  transform: translateZ(800px);
+  width: var(--edge-length-px);
+  height: var(--edge-length-px);
+  margin: 100px auto;
+  /* perspective: 500px; */
+  transform-style: preserve-3d;
+  /* perspective-origin: 50% 50%; */
+}
+#container{
+  width: var(--edge-length-px);
+  height: var(--edge-length-px);
+  transform-style: preserve-3d;
+  transform:rotateX(90deg) rotateZ(45deg);
+  border-radius: 100%;
+  /* background-color: hsla(0, 0%, 50%, 1); */
+}
+.rotate_z{
+  position: relative;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: var(--edge-length-px);
+  height: var(--edge-length-px);
+  font-size: 5rem;
+}
+
+.contents{
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left:0;
+}
+#controller{
+  z-index: 10;
+  position: fixed;
+  top:0;
+  left:0;
+}

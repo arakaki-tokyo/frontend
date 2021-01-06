@@ -1,0 +1,51 @@
+:root {
+  --edge-length: 100px;
+  --half-edge-length: calc(var(--edge-length) / 2);
+  --contents_num: 3;
+  --content_deg: calc(360 / var(--contents_num));
+}
+h3{
+  margin-bottom: 0;
+}
+.align_h{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.align_h > * {
+  width: 35%;
+}
+#scene{
+  transform-style: preserve-3d;
+  perspective: 800px;
+  border: solid 1px;
+}
+
+.content{
+  width: var(--edge-length);
+  height: var(--edge-length);
+}
+.content > *{
+  font-size: calc(var(--edge-length) - 10px);
+  font-weight: bold;
+  color: hsla(0, 100%, 0%, 0.7);
+  text-align: center;
+  line-height: calc(var(--edge-length) - 10px);
+  background-color: hsla(180, 100%, 50%, .5);
+  border: solid 3px hsla(180, 100%, 30%, .5);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.col1 > * {
+  background-color: hsla(calc(var(--content_deg) * 0 + 60), 100%, 50%, .85);
+  border: solid 3px hsla(calc(var(--content_deg) * 0 + 60), 100%, 30%, .85);
+}
+.col2 > * {
+  background-color: hsla(calc(var(--content_deg) * 1 + 60), 100%, 50%, .85);
+  border: solid 3px hsla(calc(var(--content_deg) * 1 + 60), 100%, 30%, .85);
+}
+.col3 > * {
+  background-color: hsla(calc(var(--content_deg) * 2 + 60), 100%, 50%, .85);
+  border: solid 3px hsla(calc(var(--content_deg) * 2 + 60), 100%, 30%, .85);
+}
